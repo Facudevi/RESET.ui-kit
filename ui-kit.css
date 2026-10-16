@@ -1,0 +1,154 @@
+/* =========================================================================
+   RESET — UI Kit · maqueta de la página del kit
+   Equipo: Santino Mosca Jacob · Rodrigo Masek · Facundo De Vichenzo
+
+   Esta hoja SÓLO arma la página del kit (secciones, escenarios, fichas).
+   Los componentes que se muestran usan styles.css y brand.css, los MISMOS
+   archivos del sitio: si un componente cambia en el sitio, cambia acá.
+   Los prefijos "kit-…" no existen en el sitio; los "c-…" son del sitio.
+   ========================================================================= */
+
+.kit-top {
+  position: sticky; top: 0; z-index: 40;
+  background: rgba(5, 5, 8, .88); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.kit-top__bar { display: flex; align-items: center; gap: 14px; min-height: 58px; }
+.kit-top__title { font: 700 .74rem var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.kit-top .c-button { margin-left: auto; }
+
+.kit-wrap { max-width: 1180px; margin: 0 auto; padding: 48px 16px 120px; }
+
+/* ---------- Portada del kit ---------- */
+.kit-mast img { width: min(100%, 320px); height: auto; display: block; }
+.kit-mast h1 { margin: 28px 0 0; font-size: clamp(3.2rem, 13vw, 6.4rem); line-height: .9; text-transform: uppercase; }
+.kit-mast__lead { margin: 22px 0 0; max-width: 64ch; font-size: 1.1rem; color: var(--ink-2); }
+.kit-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.kit-chip {
+  font: .76rem var(--mono); letter-spacing: .04em; color: var(--cyan);
+  padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+}
+.kit-index { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 36px; padding: 0; list-style: none; }
+.kit-index a {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 12px;
+  font: .8rem var(--mono); color: var(--ink-2); text-decoration: none;
+  border: 1px solid var(--line-2); border-radius: 6px; background: var(--surface);
+}
+.kit-index a span { color: var(--cyan); }
+.kit-index a:hover { border-color: var(--cyan); color: var(--ink); }
+
+/* ---------- Sección ---------- */
+.kit-sec { margin-top: 96px; scroll-margin-top: 74px; }
+.kit-sec__head {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px;
+  padding-bottom: 18px; margin-bottom: 30px; border-bottom: 1px solid var(--line);
+}
+.kit-sec__n { font: 700 .9rem var(--mono); letter-spacing: .18em; color: var(--cyan); }
+.kit-sec__head h2 { margin: 0; font-size: clamp(1.9rem, 5vw, 2.7rem); }
+.kit-sec__kicker { flex: 1 1 100%; margin: 0; color: var(--muted); font-size: .95rem; }
+@media (min-width: 900px) {
+  .kit-sec__kicker { flex: 1 1 320px; max-width: 460px; margin-left: auto; text-align: right; }
+}
+.kit-sub {
+  margin: 44px 0 14px; font: .74rem var(--mono); letter-spacing: .16em;
+  text-transform: uppercase; color: var(--muted);
+}
+.kit-sub:first-of-type { margin-top: 0; }
+.kit-note { max-width: 72ch; color: var(--ink-2); }
+.kit-note strong { color: var(--ink); }
+
+/* ---------- Escenario donde se apoya cada componente ---------- */
+.kit-stage {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 28px;
+  padding: 24px; border: 1px solid var(--line-2); border-radius: 14px; background: var(--surface);
+}
+.kit-stage--void { background: var(--void); }
+/* Un hijo flex no se achica por debajo de su contenido salvo que se lo pida:
+   sin esto, las pestañas y el carrusel ensanchaban la página del celular. */
+.kit-stage > * { min-width: 0; max-width: 100%; }
+.kit-stage--col { flex-direction: column; align-items: stretch; }
+.kit-stage--start { align-items: flex-start; }
+.kit-label { margin: 10px 0 0; font: .75rem var(--mono); letter-spacing: .04em; color: var(--muted); }
+.kit-state { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.kit-state--stretch { align-items: stretch; flex: 1 1 240px; }
+.kit-state__name { font: .68rem var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); text-align: center; }
+.kit-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
+.kit-grid--wide { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.kit-grid--icons { grid-template-columns: repeat(auto-fill, minmax(min(100%, 120px), 1fr)); }
+.kit-box { min-width: 0; }
+
+/* Fuente bibliográfica de una regla (Diseño de contenidos) */
+.kit-src { font: .7rem var(--mono); letter-spacing: .04em; color: var(--cyan); }
+
+/* ---------- Color ---------- */
+.kit-swatch { border: 1px solid var(--line-2); border-radius: 14px; overflow: hidden; background: var(--surface); }
+.kit-swatch__chip { height: 104px; display: flex; align-items: flex-end; padding: 12px 14px; border-bottom: 1px solid var(--line-2); }
+.kit-swatch__hex { font: .8rem var(--mono); padding: 2px 6px; border-radius: 4px; background: rgba(5, 5, 8, .72); color: var(--ink); }
+.kit-swatch__body { padding: 14px 16px 16px; }
+.kit-swatch__name { font: 600 1.05rem var(--display); color: var(--ink); }
+.kit-swatch__var { font: .74rem var(--mono); color: var(--violet-text); margin-top: 2px; }
+.kit-swatch__role { margin: 8px 0 0; font-size: .86rem; line-height: 1.4; color: var(--ink-2); }
+.kit-swatch__contrast { margin: 10px 0 0; font: .74rem var(--mono); color: var(--muted); }
+.kit-swatch__contrast b { color: var(--green); font-weight: 700; }
+.kit-swatch__contrast b.is-low { color: var(--green); }
+.kit-gradient { height: 56px; border-radius: 10px; background: var(--grad); }
+
+/* ---------- Tipografía ---------- */
+.kit-type { border-top: 1px solid var(--line-2); }
+.kit-type__row { display: grid; gap: 6px 24px; padding: 20px 0; border-bottom: 1px solid var(--line-2); align-items: baseline; }
+.kit-type__row > :first-child { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.kit-spec { font: .76rem var(--mono); letter-spacing: .03em; color: var(--muted); }
+@media (min-width: 720px) { .kit-type__row { grid-template-columns: 1fr 280px; } .kit-spec { text-align: right; } }
+
+/* ---------- Así / así no ---------- */
+.kit-dd { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.kit-do, .kit-dont { border: 1px solid; border-radius: 12px; padding: 16px 18px; background: var(--surface); }
+.kit-do { border-color: rgba(57, 255, 20, .55); }
+.kit-dont { border-color: rgba(255, 59, 92, .55); }
+.kit-do__head, .kit-dont__head { margin: 0 0 10px; font: 700 .72rem var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.kit-do__head { color: var(--green); }
+.kit-dont__head { color: #ff7f95; }
+.kit-do p, .kit-dont p { margin: 0; }
+.kit-do__why, .kit-dont__why { margin-top: 10px !important; font-size: .84rem; color: var(--muted); }
+.kit-rule { margin: 0 0 12px; font: 600 1.25rem var(--display); color: var(--ink); }
+
+/* ---------- Espaciado ---------- */
+.kit-space { display: grid; gap: 10px; }
+.kit-space__row { display: grid; grid-template-columns: 120px 1fr; gap: 14px; align-items: center; font: .78rem var(--mono); color: var(--ink-2); }
+.kit-space__bar { height: 14px; border-radius: 3px; background: var(--grad); }
+.kit-touch { width: 44px; height: 44px; border: 2px dashed var(--cyan); border-radius: 6px; display: grid; place-items: center; font: .7rem var(--mono); color: var(--cyan); }
+
+/* ---------- Íconos ---------- */
+.kit-icon { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 22px 10px 14px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--surface); color: var(--cyan); }
+.kit-icon span { font: .72rem var(--mono); color: var(--muted); text-align: center; }
+
+/* ---------- Tablas ---------- */
+.kit-table-wrap { overflow-x: auto; border: 1px solid var(--line-2); border-radius: 12px; }
+.kit-table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: .9rem; }
+.kit-table th, .kit-table td { padding: 12px 14px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line-2); }
+.kit-table th { font: 700 .7rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); background: var(--surface); }
+.kit-table tr:last-child td { border-bottom: 0; }
+.kit-table td:first-child { white-space: nowrap; }
+.kit-table a { color: var(--cyan); }
+
+/* ---------- Anatomía del aviso ---------- */
+.kit-anatomy { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: an; }
+.kit-anatomy li { counter-increment: an; display: flex; gap: 10px; align-items: baseline; color: var(--ink-2); }
+.kit-anatomy li::before { content: counter(an); flex: none; display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--violet); color: #fff; font: 700 .72rem var(--mono); }
+
+/* ---------- Ajustes de los componentes del sitio DENTRO del kit ---------- */
+/* El header del sitio es sticky y el menú del avatar flota: acá se muestran quietos. */
+.kit-stage .c-header { position: relative; width: 100%; z-index: 1; }
+.kit-stage .c-header__bar { padding-left: 16px; padding-right: 16px; }
+.kit-stage .c-menu { position: static; }
+/* Las barras de los gráficos se animan al entrar en pantalla en el sitio; acá, llenas. */
+.kit .c-chart__bar i { transform: scaleX(1); }
+.kit-stage .c-toast { width: min(100%, 380px); animation: none; }
+.kit-stage .c-alert { width: 100%; margin: 0; }
+.kit-stage .c-option { height: 100%; }
+.kit-stage .c-card { width: 100%; }
+.kit-stage .c-field { width: 100%; }
+.kit-stage .c-footer { width: 100%; }
+
+.kit-foot { margin-top: 110px; padding-top: 26px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; gap: 14px; font: .76rem var(--mono); color: var(--muted); }
+.kit-foot img { width: 96px; height: auto; }

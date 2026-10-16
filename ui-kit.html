@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RESET · UI Kit</title>
+  <meta name="description" content="Sistema de diseño del sitio final de RESET: tokens, tipografía, redacción, íconos y componentes con sus estados.">
+  <meta name="theme-color" content="#050508">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap">
+  <!-- Los MISMOS estilos del sitio: el kit nunca se desincroniza del producto -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="ui-kit.css">
+</head>
+<body class="kit">
+
+<!--
+  UI KIT — RESET (sitio final)
+  Equipo: Santino Mosca Jacob · Rodrigo Masek · Facundo De Vichenzo
+
+  Se arma con el SITIO FINAL, no con el mockup: cada componente de esta página
+  usa las mismas clases "c-…" y los mismos archivos (styles.css, brand.css,
+  art.js, ui.js, scene3d.js) que index.html. Los avisos, la validación en vivo
+  y el QR los dibuja ui.js, el mismo código que corre en el sitio.
+  Los estados que en el sitio dependen del puntero o del teclado (hover, foco)
+  se muestran quietos con las clases .is-hover / .is-focus, que en las hojas
+  del sitio son gemelas de :hover / :focus-visible.
+-->
+
+<a class="skip-link" href="#kit-main">Saltar al contenido</a>
+
+<header class="kit-top">
+  <div class="kit-top__bar l-container">
+    <a class="c-logo" href="https://reset-sitio-web.vercel.app/" aria-label="RESET, ir al sitio"><img src="assets/logo_mark_a.png" alt="" width="120" height="33"></a>
+    <span class="kit-top__title">UI Kit</span>
+    <a class="c-button c-button--secondary c-button--sm" href="https://reset-sitio-web.vercel.app/">Ver el sitio</a>
+  </div>
+</header>
+
+<!-- Zona de avisos en vivo (los botones "Probar" de la sección 09) -->
+<div class="c-toasts" aria-live="polite" aria-atomic="false"></div>
+
+<main class="kit-wrap" id="kit-main">
+
+  <!-- ============================== PORTADA ============================== -->
+  <header class="kit-mast">
+    <img src="assets/logo_full_a.png" alt="RESET" width="320" height="145">
+    <h1>UI Kit</h1>
+    <p class="kit-mast__lead">Sistema de diseño del sitio final de RESET, el festival <i lang="en">gamer</i> que gamifica el bienestar. Reúne los colores, las letras, las reglas de redacción, los íconos y cada componente con sus estados. Está armado con los mismos archivos del sitio: lo que se ve acá es lo que corre allá.</p>
+    <ul class="kit-chips" aria-label="Características del sistema">
+      <li class="kit-chip">Primero el celular · 375 → 1366 px</li>
+      <li class="kit-chip">Modo oscuro nativo</li>
+      <li class="kit-chip">Contraste AA de la WCAG 2.1</li>
+      <li class="kit-chip">Español rioplatense · voseo</li>
+    </ul>
+    <nav aria-label="Secciones del kit">
+      <ol class="kit-index">
+        <li><a href="#marca"><span>01</span> Marca</a></li>
+        <li><a href="#color"><span>02</span> Color</a></li>
+        <li><a href="#tipografia"><span>03</span> Tipografía</a></li>
+        <li><a href="#redaccion"><span>04</span> Redacción</a></li>
+        <li><a href="#espaciado"><span>05</span> Espaciado y grilla</a></li>
+        <li><a href="#iconos"><span>06</span> Iconografía</a></li>
+        <li><a href="#botones"><span>07</span> Botones</a></li>
+        <li><a href="#formularios"><span>08</span> Formularios</a></li>
+        <li><a href="#avisos"><span>09</span> Avisos</a></li>
+        <li><a href="#navegacion"><span>10</span> Navegación</a></li>
+        <li><a href="#tarjetas"><span>11</span> Tarjetas</a></li>
+        <li><a href="#datos"><span>12</span> Datos y contenido</a></li>
+        <li><a href="#objetos"><span>13</span> Objetos 3D</a></li>
+        <li><a href="#movimiento"><span>14</span> Movimiento</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <!-- ============================== 01 MARCA ============================== -->
+  <section class="kit-sec" id="marca" aria-labelledby="t-marca">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">01</span>
+      <h2 id="t-marca">Marca</h2>
+      <p class="kit-sec__kicker">El hexágono es el marco, el trapecio es el contenedor y el triángulo es la flecha. Nunca más de tres acentos a la vez.</p>
+    </div>
+
+    <div class="kit-grid kit-grid--wide">
+      <div class="kit-box">
+        <div class="kit-stage kit-stage--void" style="justify-content:center;min-height:200px">
+          <img src="assets/logo_full_a.png" alt="Logotipo completo de RESET" width="280" height="127" style="width:min(100%,280px);height:auto">
+        </div>
+        <p class="kit-label">Logotipo completo · pantallas de inicio de sesión y registro</p>
+      </div>
+      <div class="kit-box">
+        <div class="kit-stage kit-stage--void" style="justify-content:center;min-height:200px">
+          <img src="assets/logo_mark_a.png" alt="Isologotipo de RESET" width="200" height="55" style="width:min(100%,200px);height:auto">
+        </div>
+        <p class="kit-label">Isologotipo · header y pie (120 px de ancho)</p>
+      </div>
+    </div>
+
+    <p class="kit-sub">Formas de la marca</p>
+    <div class="kit-grid">
+      <div class="kit-box">
+        <div class="kit-stage" style="justify-content:center"><span class="c-media c-media--icon" data-icon-hex="trophy" aria-hidden="true"></span><span class="c-icon" data-icon="heart" aria-hidden="true"></span></div>
+        <p class="kit-label">Hexágono · marco de íconos, avatar y pasos</p>
+      </div>
+      <div class="kit-box">
+        <div class="kit-stage" style="justify-content:center"><span class="c-badge">Principal</span><span class="c-badge c-badge--outline">Complementaria</span></div>
+        <p class="kit-label">Trapecio · etiquetas, pestañas y logos de marcas</p>
+      </div>
+      <div class="kit-box">
+        <div class="kit-stage" style="justify-content:center"><ul class="c-option__list" style="margin:0"><li>Lista con flecha</li><li>Triángulo cian</li></ul></div>
+        <p class="kit-label">Triángulo · viñetas y dirección</p>
+      </div>
+    </div>
+
+    <p class="kit-sub">Patrones y degradé</p>
+    <div class="kit-grid">
+      <div class="kit-box"><div class="kit-stage" style="min-height:110px;background:var(--grid),var(--void)"></div><p class="kit-label">Grilla de 20 px en violeta · portada y secciones oscuras</p></div>
+      <div class="kit-box"><div class="kit-stage" style="min-height:110px;background:var(--diag),var(--surface)"></div><p class="kit-label">Trama diagonal a 45° · secciones alternas, fechas agotadas</p></div>
+      <div class="kit-box"><div class="kit-stage kit-stage--col" style="min-height:110px;justify-content:center"><div class="kit-gradient"></div></div><p class="kit-label">Degradé del logo · violeta → cian → verde (--grad)</p></div>
+    </div>
+  </section>
+
+  <!-- ============================== 02 COLOR ============================== -->
+  <section class="kit-sec" id="color" aria-labelledby="t-color">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">02</span>
+      <h2 id="t-color">Color</h2>
+      <p class="kit-sec__kicker">Fondo casi negro y tres neones del logo. El color acompaña al mensaje, nunca es el único aviso: cada estado lleva además un ícono o un texto.</p>
+    </div>
+    <!-- Las fichas las arma ui-kit.js leyendo las variables de styles.css y
+         brand.css: si un color cambia en el sitio, la ficha y su contraste
+         cambian solos. -->
+    <div class="kit-grid" data-kit-colors></div>
+    <p class="kit-note" style="margin-top:20px">El contraste se calcula en vivo con la fórmula de la WCAG. <strong>Texto:</strong> 4,5:1 como mínimo (AA). Por eso el violeta puro de la marca (#8B30FF) se usa para fondos y bordes, y el texto violeta usa su versión aclarada <code>--violet-text</code>. El texto blanco sobre el botón violeta da <b data-kit-pair="#ffffff|--violet">…</b>.</p>
+  </section>
+
+  <!-- ============================ 03 TIPOGRAFÍA ============================ -->
+  <section class="kit-sec" id="tipografia" aria-labelledby="t-tipo">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">03</span>
+      <h2 id="t-tipo">Tipografía</h2>
+      <p class="kit-sec__kicker">Rajdhani para títulos, botones y señalética · Inter para leer y completar · JetBrains Mono para datos, horarios y códigos.</p>
+    </div>
+
+    <p class="kit-sub">Rajdhani · títulos y acciones</p>
+    <div class="kit-type">
+      <div class="kit-type__row"><p class="hero__title">Subí de nivel</p><span class="kit-spec">Rajdhani 700 · clamp(2.3–4.1 rem) · mayúsculas · portada</span></div>
+      <div class="kit-type__row"><h2 style="margin:0">Seis zonas, <span class="grad">un recorrido</span></h2><span class="kit-spec">Rajdhani 700 · clamp(1.4–2 rem) · título de sección + degradé</span></div>
+      <div class="kit-type__row"><h3 style="margin:0;font-size:1.25rem">Recompensas que no paran</h3><span class="kit-spec">Rajdhani 600 · 1.15–1.25 rem · título de tarjeta</span></div>
+      <div class="kit-type__row"><p style="margin:0;font:700 1.08rem var(--display);letter-spacing:.02em">Obtener ticket</p><span class="kit-spec">Rajdhani 700 · 1.08 rem · botones</span></div>
+    </div>
+
+    <p class="kit-sub">Inter · lectura y formularios</p>
+    <div class="kit-type">
+      <div class="kit-type__row"><p class="hero__lead" style="margin:0">Tres días de <i lang="en">gaming</i>, <i lang="en">esports</i> y bienestar donde cada descanso suma</p><span class="kit-spec">Inter 400 · 1.1 rem · bajada de portada</span></div>
+      <div class="kit-type__row"><p style="margin:0">Las fechas no disponibles aparecen tachadas y se pueden tocar para saber por qué.</p><span class="kit-spec">Inter 400 · 16 px / 1.55 · texto corrido</span></div>
+      <div class="kit-type__row"><p style="margin:0;font-weight:600">Correo electrónico</p><span class="kit-spec">Inter 600 · 16 px · rótulo de campo</span></div>
+      <div class="kit-type__row"><p class="c-field__hint" style="font-size:.82rem">Mínimo 8 caracteres</p><span class="kit-spec">Inter 400 · 0.82 rem · ayuda de campo</span></div>
+    </div>
+
+    <p class="kit-sub">JetBrains Mono · datos</p>
+    <div class="kit-type">
+      <div class="kit-type__row"><p class="eyebrow" style="margin:0">El mapa del evento</p><span class="kit-spec">Mono · 0.74 rem · mayúsculas · antetítulo</span></div>
+      <div class="kit-type__row"><p style="margin:0;font:700 1rem var(--mono);color:var(--green)">18:00 h</p><span class="kit-spec">Mono 700 · cronograma</span></div>
+      <div class="kit-type__row"><p class="c-qr__label" style="font-family:var(--mono)">RST-7K2Q</p><span class="kit-spec">Mono 700 · 24 % de interletra · código de entrada</span></div>
+    </div>
+  </section>
+
+  <!-- ============================= 04 REDACCIÓN ============================= -->
+  <section class="kit-sec" id="redaccion" aria-labelledby="t-redaccion">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">04</span>
+      <h2 id="t-redaccion">Redacción</h2>
+      <p class="kit-sec__kicker">Cómo se escribe en el sitio. El texto también es un componente: tiene reglas, igual que el color o el espaciado.</p>
+    </div>
+
+    <p class="kit-rule">Extranjerismos en cursiva</p>
+    <div class="kit-dd">
+      <div class="kit-do"><p class="kit-do__head">✓ Así</p><p>Partidas de 30 minutos y después, un <i lang="en">cooldown</i>. El torneo se juega en la <i lang="en">Main Arena</i>.</p><p class="kit-do__why">Se escribe <code>&lt;i lang="en"&gt;</code>: va en cursiva y el lector de pantalla lo pronuncia en inglés. Las marcas y las personas van en redonda (Red Bull, KRÜ Esports, Coscu): son nombres propios, no extranjerismos.</p></div>
+      <div class="kit-do"><p class="kit-do__head">✓ Si hay palabra en español, se usa</p><p>Correo electrónico · pufs</p><p class="kit-do__why">La cursiva es para lo que no tiene un equivalente natural. Se escribe "correo", no "mail", y "pufs", no "puffs".</p></div>
+    </div>
+
+    <p class="kit-rule" style="margin-top:40px">Punto final cuando hay dos oraciones o más</p>
+    <div class="kit-dd">
+      <div class="kit-do"><p class="kit-do__head">✓ Dos oraciones: con punto</p><p>En Mi cuenta, dentro de Mis entradas. Tocá tu avatar, arriba a la derecha, y abrí el QR de la entrada que quieras.</p></div>
+      <div class="kit-do"><p class="kit-do__head">✓ Una oración, título o botón: sin punto</p><p>Hasta 6 por compra, todas para el mismo paquete y la misma fecha</p><p class="kit-do__why">Tampoco lleva punto una pregunta seguida de un enlace de acción ("¿No tenés cuenta? Registrate"): el enlace es un botón, no una oración.</p></div>
+    </div>
+
+    <p class="kit-rule" style="margin-top:40px">Montos <span class="kit-src">Diseño de contenidos, cap. 8</span></p>
+    <div class="kit-dd">
+      <div class="kit-do"><p class="kit-do__head">✓ Así</p><p style="font:700 1.6rem var(--display)" data-kit-money="72000">$72 000</p><p class="kit-do__why">Signo pegado a la cifra y miles con un espacio fino que no se corta (U+202F): el monto nunca queda partido en dos renglones.</p></div>
+      <div class="kit-dont"><p class="kit-dont__head">✗ Así no</p><p style="font:700 1.6rem var(--display)">$ 72.000 · $72000</p></div>
+    </div>
+
+    <p class="kit-rule" style="margin-top:40px">Voz y tono <span class="kit-src">Diseño de contenidos, cap. 3</span></p>
+    <div class="kit-dd">
+      <div class="kit-do"><p class="kit-do__head">✓ Así</p><p>Voseo y segunda persona: "Elegí tu fecha". Los botones dicen lo que hacen: <b>Obtener ticket</b>, <b>Elegir esta fecha</b>, <b>Confirmar y pagar</b>.</p></div>
+      <div class="kit-do"><p class="kit-do__head">✓ Errores que ayudan</p><p>Qué pasó y cómo seguir, al lado del campo: "Revisá el correo: le falta la @ o el dominio, como en nombre@correo.com".</p></div>
+      <div class="kit-dont"><p class="kit-dont__head">✗ Así no</p><p>"Error de validación." · "Revisá los campos en rojo." · "Hacé clic aquí." · "Enviar".</p></div>
+    </div>
+  </section>
+
+  <!-- =========================== 05 ESPACIADO =========================== -->
+  <section class="kit-sec" id="espaciado" aria-labelledby="t-espaciado">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">05</span>
+      <h2 id="t-espaciado">Espaciado y grilla</h2>
+      <p class="kit-sec__kicker">Primero el celular: las reglas base son para 375 px y cada punto de quiebre suma columnas.</p>
+    </div>
+    <div class="kit-grid kit-grid--wide">
+      <div class="kit-box">
+        <div class="kit-stage kit-stage--col">
+          <div class="kit-space">
+            <div class="kit-space__row"><span>--radius 6</span><span class="kit-space__bar" style="width:6px"></span></div>
+            <div class="kit-space__row"><span>--gap 16</span><span class="kit-space__bar" style="width:16px"></span></div>
+            <div class="kit-space__row"><span>tarjeta 18</span><span class="kit-space__bar" style="width:18px"></span></div>
+            <div class="kit-space__row"><span>--touch 44</span><span class="kit-space__bar" style="width:44px"></span></div>
+            <div class="kit-space__row"><span>sección 56 / 88</span><span class="kit-space__bar" style="width:88px"></span></div>
+          </div>
+        </div>
+        <p class="kit-label">Tokens de medida (px) · secciones: 56 en el celular, 88 desde 1024</p>
+      </div>
+      <div class="kit-box">
+        <div class="kit-stage" style="justify-content:center"><span class="kit-touch">44</span><p class="kit-note" style="margin:0;flex:1 1 180px">Todo lo que se toca mide al menos <strong>44 × 44 px</strong>: botones, pestañas, flechas y la cruz de los avisos (40 px más su margen).</p></div>
+        <p class="kit-label">Objetivo táctil mínimo</p>
+      </div>
+    </div>
+    <p class="kit-sub">Puntos de quiebre</p>
+    <div class="kit-table-wrap">
+      <table class="kit-table">
+        <thead><tr><th>Ancho</th><th>Contenedor</th><th>Qué cambia</th></tr></thead>
+        <tbody>
+          <tr><td>Base · celular</td><td>100 % con 16 px de margen</td><td>Una columna. El menú va en un segundo renglón del header (116 px). El botón de pago queda fijo abajo.</td></tr>
+          <tr><td>≥ 720 px · tableta</td><td>24 px de margen</td><td>Header en un renglón (66 px). Paquetes y fechas en 3 columnas. Login partido en dos. Los avisos pasan arriba a la derecha.</td></tr>
+          <tr><td>≥ 1024 px · computadora</td><td>1120 px máximo</td><td>Portada en dos columnas. Encuesta con el control fijo a la izquierda. Compra con el resumen fijo a la derecha.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============================ 06 ÍCONOS ============================ -->
+  <section class="kit-sec" id="iconos" aria-labelledby="t-iconos">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">06</span>
+      <h2 id="t-iconos">Iconografía</h2>
+      <p class="kit-sec__kicker">Set propio de contorno, trazo de 1,5 px sobre 24 px. Heredan el color del texto, así un mismo ícono sirve en cian, verde o rojo.</p>
+    </div>
+    <!-- La grilla la arma ui-kit.js con la lista de art.js: un ícono nuevo
+         en el sitio aparece acá sin tocar el kit. -->
+    <div class="kit-grid kit-grid--icons" data-kit-icons></div>
+
+    <p class="kit-sub">Marcos</p>
+    <div class="kit-stage">
+      <div class="kit-state"><span class="c-media c-media--icon" data-icon-hex="controller" aria-hidden="true"></span><span class="kit-state__name">hexágono 56</span></div>
+      <div class="kit-state"><span class="c-media c-media--avatar" data-icon-hex="brain" aria-hidden="true"></span><span class="kit-state__name">hexágono 88</span></div>
+      <div class="kit-state"><span class="c-media c-media--logo" data-icon-trap="bolt" aria-hidden="true"></span><span class="kit-state__name">trapecio</span></div>
+      <div class="kit-state"><span class="c-icon" data-icon="drop" aria-hidden="true"></span><span class="kit-state__name">pilar</span></div>
+    </div>
+  </section>
+
+  <!-- ============================ 07 BOTONES ============================ -->
+  <section class="kit-sec" id="botones" aria-labelledby="t-botones">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">07</span>
+      <h2 id="t-botones">Botones</h2>
+      <p class="kit-sec__kicker">Una sola acción principal por pantalla. El paso siguiente va a la derecha y la vuelta atrás, arriba a la izquierda.</p>
+    </div>
+
+    <p class="kit-sub">Principal · c-button--primary</p>
+    <div class="kit-stage">
+      <div class="kit-state"><a class="c-button c-button--primary" href="#botones">Obtener ticket</a><span class="kit-state__name">reposo</span></div>
+      <div class="kit-state"><a class="c-button c-button--primary is-hover" href="#botones">Obtener ticket</a><span class="kit-state__name">puntero encima</span></div>
+      <div class="kit-state"><a class="c-button c-button--primary is-focus" href="#botones">Obtener ticket</a><span class="kit-state__name">foco de teclado</span></div>
+      <div class="kit-state"><button class="c-button c-button--primary is-loading" type="button" disabled>Procesando pago…</button><span class="kit-state__name">cargando</span></div>
+      <div class="kit-state"><button class="c-button c-button--primary" type="button" disabled>Confirmar y pagar</button><span class="kit-state__name">deshabilitado</span></div>
+    </div>
+
+    <p class="kit-sub">Secundario · c-button--secondary</p>
+    <div class="kit-stage">
+      <div class="kit-state"><a class="c-button c-button--secondary" href="#botones">Ver cronograma</a><span class="kit-state__name">reposo</span></div>
+      <div class="kit-state"><a class="c-button c-button--secondary is-hover" href="#botones">Ver cronograma</a><span class="kit-state__name">puntero encima</span></div>
+      <div class="kit-state"><a class="c-button c-button--secondary is-focus" href="#botones">Ver cronograma</a><span class="kit-state__name">foco de teclado</span></div>
+    </div>
+
+    <p class="kit-sub">Inverso · llamado final sobre fondo oscuro</p>
+    <div class="kit-stage kit-stage--void">
+      <div class="kit-state"><a class="c-button c-button--primary c-button--inverse" href="#botones">Obtener ticket</a><span class="kit-state__name">reposo</span></div>
+      <div class="kit-state"><a class="c-button c-button--primary c-button--inverse is-hover" href="#botones">Obtener ticket</a><span class="kit-state__name">puntero encima</span></div>
+    </div>
+
+    <p class="kit-sub">Enlace que sale del sitio</p>
+    <div class="kit-stage kit-stage--start">
+      <div>
+        <a class="c-button c-button--secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Centro+de+Convenciones+Buenos+Aires" target="_blank" rel="noopener noreferrer" aria-describedby="kit-llegar-nota">Cómo llegar <span class="c-ext" data-icon="external" aria-hidden="true"></span></a>
+        <p class="c-link-note" id="kit-llegar-nota">Se abre Google Maps en otra pestaña</p>
+      </div>
+      <p class="kit-note" style="margin:0;flex:1 1 260px">Lleva el ícono estándar de enlace externo y una nota visible que dice a dónde va. Toda acción con consecuencias se anuncia <strong>antes</strong> de tocarla.</p>
+    </div>
+
+    <p class="kit-sub">Acción principal a la derecha</p>
+    <div class="kit-space" style="gap:16px">
+      <div class="kit-box"><div class="kit-stage kit-stage--col"><div class="flow__actions flow__actions--end" style="margin:0"><button class="c-button c-button--primary" type="button">Finalizar compra</button></div></div><p class="kit-label">flow__actions--end · un solo paso siguiente</p></div>
+      <div class="kit-box"><div class="kit-stage kit-stage--col"><div class="flow__actions flow__actions--split" style="margin:0"><a class="c-button c-button--secondary" href="#botones">Volver al inicio</a><a class="c-button c-button--primary" href="#botones">Ver mis entradas</a></div></div><p class="kit-label">flow__actions--split · salida a la izquierda, avance a la derecha</p></div>
+    </div>
+
+    <p class="kit-sub">Tamaños y variantes</p>
+    <div class="kit-stage">
+      <div class="kit-state"><a class="c-button c-button--primary c-button--sm" href="#botones">Iniciar sesión</a><span class="kit-state__name">chico · header</span></div>
+      <div class="kit-state"><a class="c-button c-button--secondary c-button--sm" href="#botones">Ver QR</a><span class="kit-state__name">chico · lista</span></div>
+      <div class="kit-state kit-state--stretch"><button class="c-button c-button--primary c-button--block" type="button">Crear cuenta</button><span class="kit-state__name">ancho completo · formularios</span></div>
+    </div>
+    <div class="kit-stage" style="margin-top:16px">
+      <div class="social" style="flex:1 1 300px">
+        <button class="c-button c-button--social" type="button"><span class="c-social-mark" aria-hidden="true">G</span> Google</button>
+        <button class="c-button c-button--social is-hover" type="button"><span class="c-social-mark" aria-hidden="true">A</span> Apple</button>
+        <button class="c-button c-button--social" type="button"><span class="c-social-mark" aria-hidden="true">D</span> Discord</button>
+      </div>
+      <span class="kit-state__name">otra cuenta · el del medio, con el puntero encima</span>
+    </div>
+
+    <p class="kit-sub">Botón de ícono y enlace de vuelta</p>
+    <div class="kit-stage">
+      <div class="kit-state"><button class="c-icon-button" type="button" aria-label="Ver actividades anteriores"><span data-icon="arrow-left" aria-hidden="true"></span></button><span class="kit-state__name">reposo</span></div>
+      <div class="kit-state"><button class="c-icon-button is-hover" type="button" aria-label="Ver más actividades"><span data-icon="arrow-right" aria-hidden="true"></span></button><span class="kit-state__name">puntero encima</span></div>
+      <div class="kit-state"><button class="c-icon-button" type="button" disabled aria-label="Sin más actividades"><span data-icon="arrow-right" aria-hidden="true"></span></button><span class="kit-state__name">deshabilitado</span></div>
+      <div class="kit-state"><button class="c-icon-button c-icon-button--lg" type="button" aria-label="Sumar una persona">+</button><span class="kit-state__name">grande · cantidad</span></div>
+      <div class="kit-state"><a class="c-backlink" href="#botones">← Volver a Fecha</a><span class="kit-state__name">vuelta atrás</span></div>
+    </div>
+  </section>
+
+  <!-- ========================== 08 FORMULARIOS ========================== -->
+  <section class="kit-sec" id="formularios" aria-labelledby="t-form">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">08</span>
+      <h2 id="t-form">Formularios</h2>
+      <p class="kit-sec__kicker">El tilde verde aparece mientras se escribe; el error, recién al salir del campo. Nunca se reta a nadie a mitad de una palabra.</p>
+    </div>
+
+    <p class="kit-sub">Estados del campo · c-field</p>
+    <div class="kit-grid kit-grid--wide">
+      <div class="kit-box"><div class="kit-stage">
+        <div class="c-field"><label for="kf-1">Correo electrónico</label><input id="kf-1" type="email" autocomplete="off"><p class="c-field__error" hidden></p></div>
+      </div><p class="kit-label">vacío</p></div>
+      <div class="kit-box"><div class="kit-stage">
+        <div class="c-field"><label for="kf-2">Correo electrónico</label><input id="kf-2" class="is-focus" type="email" value="santino@" autocomplete="off"><p class="c-field__error" hidden></p></div>
+      </div><p class="kit-label">foco · borde y halo cian</p></div>
+      <div class="kit-box"><div class="kit-stage">
+        <div class="c-field"><label for="kf-3">Correo electrónico</label><input id="kf-3" type="email" value="santino@correo.com" autocomplete="off" data-kit-field="valid"><p class="c-field__error" hidden></p></div>
+      </div><p class="kit-label">válido · tilde verde</p></div>
+      <div class="kit-box"><div class="kit-stage">
+        <div class="c-field"><label for="kf-4">Correo electrónico</label><input id="kf-4" type="email" value="santino@correo" autocomplete="off" data-kit-field="error" data-kit-msg="Revisá el correo: le falta el dominio, como en nombre@correo.com"><p class="c-field__error" hidden></p></div>
+      </div><p class="kit-label">error · al lado del campo, con la salida</p></div>
+      <div class="kit-box"><div class="kit-stage">
+        <div class="c-field"><label for="kf-5">Correo electrónico</label><input id="kf-5" type="email" value="tomas@correo.com" autocomplete="off" data-kit-field="error-action" data-kit-msg="No encontramos una cuenta con este correo." data-kit-action="Crear una cuenta con este correo"><p class="c-field__error" hidden></p></div>
+      </div><p class="kit-label">error con recuperación</p></div>
+      <div class="kit-box"><div class="kit-stage">
+        <div class="c-field"><label for="kf-6">Contraseña</label><div class="c-field__group"><input id="kf-6" type="password" value="clave1234" autocomplete="off"><button class="c-field__toggle" type="button" data-kit-toggle="kf-6" aria-pressed="false">Mostrar</button></div><p class="c-field__hint">Mínimo 8 caracteres</p></div>
+      </div><p class="kit-label">contraseña · con ayuda y "Mostrar"</p></div>
+    </div>
+
+    <p class="kit-sub">Probalo · validación en vivo</p>
+    <div class="kit-stage kit-stage--start">
+      <form class="c-form" style="flex:1 1 300px" novalidate data-kit-live>
+        <div class="c-field"><label for="kit-live-email">Correo electrónico</label><input id="kit-live-email" type="email" inputmode="email" autocomplete="off"><p class="c-field__error" hidden></p></div>
+        <div class="c-field"><label for="kit-live-card">Número de tarjeta</label><input id="kit-live-card" type="text" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19" autocomplete="off"><p class="c-field__error" hidden></p></div>
+      </form>
+      <div style="flex:1 1 260px">
+        <p class="kit-note" style="margin-top:0">Es el mismo código del sitio (<code>RESETUI.liveValidate</code>, en ui.js):</p>
+        <ul class="check-list">
+          <li>El tilde aparece apenas el dato queda bien, sin salir del campo</li>
+          <li>El error aparece al salir del campo, no mientras se escribe</li>
+          <li>Un error que ya está a la vista se va solo al corregirlo</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="kit-sub">Medio de pago y cantidad</p>
+    <div class="kit-space" style="gap:16px">
+      <div class="kit-box"><div class="kit-stage kit-stage--col">
+        <fieldset class="c-field"><legend>Medio de pago</legend>
+          <div class="pay-methods">
+            <label class="c-radio-card"><input type="radio" name="kit-method" checked><span><span class="c-icon c-icon--bare" data-icon="card" aria-hidden="true"></span> Tarjeta de crédito</span></label>
+            <label class="c-radio-card"><input type="radio" name="kit-method"><span><span class="c-icon c-icon--bare" data-icon="card" aria-hidden="true"></span> Tarjeta de débito</span></label>
+            <label class="c-radio-card"><input type="radio" name="kit-method"><span><span class="c-icon c-icon--bare" data-icon="wallet" aria-hidden="true"></span> Billetera virtual</span></label>
+          </div>
+        </fieldset>
+      </div><p class="kit-label">c-radio-card · el elegido se marca con borde, fondo y halo violeta</p></div>
+      <div class="kit-box"><div class="kit-stage kit-stage--col">
+        <div class="qty" style="margin:0">
+          <div class="qty__box">
+            <button class="c-icon-button c-icon-button--lg" type="button" aria-label="Restar una persona">−</button>
+            <output class="qty__value">2</output>
+            <button class="c-icon-button c-icon-button--lg" type="button" aria-label="Sumar una persona">+</button>
+          </div>
+          <p class="qty__hint">Hasta 6 personas por compra · Subtotal: <strong data-kit-money="70000">$70 000</strong></p>
+        </div>
+      </div><p class="kit-label">Selector de cantidad · en el tope, el "+" se deshabilita</p></div>
+    </div>
+  </section>
+
+  <!-- ============================= 09 AVISOS ============================= -->
+  <section class="kit-sec" id="avisos" aria-labelledby="t-avisos">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">09</span>
+      <h2 id="t-avisos">Avisos</h2>
+      <p class="kit-sec__kicker">Una sola anatomía para todo aviso, temporal o en la página.</p>
+    </div>
+
+    <p class="kit-sub">Anatomía</p>
+    <div class="kit-grid kit-grid--wide">
+      <div class="kit-box"><div class="kit-stage" data-kit-toast="success|Cuenta creada|Te damos la bienvenida, Santino. Ya podés elegir tu paquete."></div></div>
+      <div class="kit-box">
+        <ol class="kit-anatomy">
+          <li>Ícono a la izquierda, del color del tipo de aviso (verde, cian o rojo)</li>
+          <li>Título breve, de pocas palabras, para escanear</li>
+          <li>Bajada: qué pasó y cómo seguir</li>
+          <li>Cruz de cierre a la derecha: siempre se puede descartar</li>
+        </ol>
+      </div>
+    </div>
+
+    <p class="kit-sub">Aviso temporal · c-toast</p>
+    <div class="kit-grid kit-grid--wide">
+      <div class="kit-box"><div class="kit-stage" data-kit-toast="success|Cuenta creada|Te damos la bienvenida, Santino. Ya podés elegir tu paquete."></div><p class="kit-label">éxito · 5,5 s</p></div>
+      <div class="kit-box"><div class="kit-stage" data-kit-toast="info|Cerraste sesión|Tus entradas siguen guardadas en tu cuenta"></div><p class="kit-label">información · 5,5 s</p></div>
+      <div class="kit-box"><div class="kit-stage" data-kit-toast="error|Entrada no encontrada|Esa entrada no está en tu cuenta. Acá están todas las tuyas."></div><p class="kit-label">error · 8 s (hay que leerlo y actuar)</p></div>
+    </div>
+    <div class="kit-stage" style="margin-top:16px">
+      <button class="c-button c-button--secondary c-button--sm" type="button" data-kit-try="success">Probar éxito</button>
+      <button class="c-button c-button--secondary c-button--sm" type="button" data-kit-try="info">Probar información</button>
+      <button class="c-button c-button--secondary c-button--sm" type="button" data-kit-try="error">Probar error</button>
+      <span class="kit-state__name">Con el puntero encima, el aviso no se va</span>
+    </div>
+
+    <p class="kit-sub">Alerta en la página · c-alert</p>
+    <div class="kit-stage kit-stage--col">
+      <div class="c-alert" role="status" data-kit-alert="info" data-title="Iniciá sesión para seguir" data-html="Para obtener tu ticket, iniciá sesión o creá una cuenta"></div>
+      <div class="c-alert" role="status" data-kit-alert="success" data-title="¡Compra confirmada!" data-html="Tu entrada ya está guardada en Mi cuenta"></div>
+      <div class="c-alert" role="alert" data-kit-alert="error" data-title="Lugares insuficientes" data-html="Para el domingo 20 de septiembre quedan 4 lugares. Podés &lt;button type=&quot;button&quot;&gt;bajar a 4 personas&lt;/button&gt; o &lt;a href=&quot;#avisos&quot;&gt;elegir otra fecha&lt;/a&gt;."></div>
+      <div><button class="c-button c-button--secondary c-button--sm" type="button" data-kit-reset-alerts>Mostrar las alertas de nuevo</button></div>
+    </div>
+  </section>
+
+  <!-- =========================== 10 NAVEGACIÓN =========================== -->
+  <section class="kit-sec" id="navegacion" aria-labelledby="t-nav">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">10</span>
+      <h2 id="t-nav">Navegación</h2>
+      <p class="kit-sec__kicker">Un solo header con tres variantes: el inicio lo muestra entero, la compra lo achica y el inicio de sesión lo saca para no distraer.</p>
+    </div>
+
+    <p class="kit-sub">Header · variante "inicio" sin sesión, con la barra de nivel al 60 %</p>
+    <div class="kit-stage kit-stage--void" style="padding:0 0 30px;overflow:hidden">
+      <header class="c-header" data-variant="home">
+        <div class="c-header__bar">
+          <span class="c-logo"><img src="assets/logo_mark_a.png" alt="RESET" width="120" height="33"></span>
+          <nav class="c-nav" aria-label="Ejemplo de menú"><ul><li><a href="#navegacion" class="is-current">Información</a></li><li><a href="#navegacion">Cronograma</a></li></ul></nav>
+          <div class="c-header__actions"><a class="c-button c-button--primary c-button--sm" href="#navegacion">Iniciar sesión</a></div>
+        </div>
+        <div class="c-xpbar" aria-hidden="true"><div class="c-xpbar__fill" style="width:60%"></div><span class="c-xpbar__label">Nivel 6 de 10</span></div>
+      </header>
+    </div>
+    <p class="kit-label">La barra de nivel avanza con la lectura del inicio (estado del sistema). El menú marca en verde la sección en pantalla.</p>
+
+    <p class="kit-sub">Header · con sesión, menú de la cuenta abierto</p>
+    <div class="kit-stage kit-stage--void" style="padding:0;overflow:hidden">
+      <header class="c-header" data-variant="flow">
+        <div class="c-header__bar">
+          <span class="c-logo"><img src="assets/logo_mark_a.png" alt="RESET" width="120" height="33"></span>
+          <div class="c-header__actions">
+            <div class="c-avatar-menu"><button class="c-avatar" type="button" aria-expanded="true" aria-label="Menú de la cuenta (ejemplo)"><span class="c-avatar__initials">SM</span></button></div>
+          </div>
+        </div>
+      </header>
+      <div style="display:flex;justify-content:flex-end;width:100%;padding:0 16px 16px">
+        <div class="c-menu" style="width:220px">
+          <p class="c-menu__who">Hola, <strong>Santino</strong></p>
+          <a class="c-menu__item" href="#navegacion">Mi cuenta</a>
+          <a class="c-menu__item is-hover" href="#navegacion">Mis entradas</a>
+          <button class="c-menu__item" type="button">Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="kit-sub">Indicador de pasos · c-stepper (paso 3 de 4)</p>
+    <div class="kit-stage kit-stage--col">
+      <ol class="c-stepper" aria-label="Pasos de la compra (ejemplo)" style="width:100%">
+        <li class="c-stepper__item is-done"><a href="#navegacion"><span class="c-stepper__dot" aria-hidden="true">✓</span><span class="c-stepper__label">Paquete</span><span class="visually-hidden"> (hecho, volver a este paso)</span></a></li>
+        <li class="c-stepper__item is-done"><a href="#navegacion"><span class="c-stepper__dot" aria-hidden="true">✓</span><span class="c-stepper__label">Fecha</span><span class="visually-hidden"> (hecho, volver a este paso)</span></a></li>
+        <li class="c-stepper__item is-current" aria-current="step"><span class="c-stepper__dot" aria-hidden="true">3</span><span class="c-stepper__label">Cantidad</span><span class="visually-hidden"> (paso 3 de 4)</span></li>
+        <li class="c-stepper__item"><span class="c-stepper__dot" aria-hidden="true">4</span><span class="c-stepper__label">Compra</span></li>
+      </ol>
+    </div>
+    <p class="kit-label">Hecho (verde, se puede volver) · actual (violeta con brillo) · pendiente</p>
+
+    <p class="kit-sub">Pestañas · c-tabs (probá con las flechas del teclado)</p>
+    <div class="kit-stage kit-stage--col">
+      <div class="c-tabs" data-kit-tabs style="margin:0">
+        <div class="c-tabs__list" role="tablist" aria-label="Zonas (ejemplo)">
+          <button class="c-tabs__tab" role="tab" type="button" aria-selected="true" aria-controls="kz-0" id="kt-0"><i lang="en">Spawn Point</i></button>
+          <button class="c-tabs__tab is-hover" role="tab" type="button" aria-selected="false" aria-controls="kz-1" id="kt-1" tabindex="-1"><i lang="en">The Nexus</i></button>
+          <button class="c-tabs__tab" role="tab" type="button" aria-selected="false" aria-controls="kz-2" id="kt-2" tabindex="-1"><i lang="en">Safe Zone</i></button>
+        </div>
+        <div class="c-tabs__panel" role="tabpanel" id="kz-0" aria-labelledby="kt-0"><p style="margin:0">Acreditación e ingreso. Pasás tu entrada por los molinetes digitales.</p></div>
+        <div class="c-tabs__panel" role="tabpanel" id="kz-1" aria-labelledby="kt-1" hidden><p style="margin:0">Estaciones de PC y consolas en islas. Partidas de 30 minutos y después, un <i lang="en">cooldown</i>.</p></div>
+        <div class="c-tabs__panel" role="tabpanel" id="kz-2" aria-labelledby="kt-2" hidden><p style="margin:0">Silencio, pufs y luz cálida para descansar la vista.</p></div>
+      </div>
+    </div>
+    <p class="kit-label">Activa en violeta · la segunda, con el puntero encima</p>
+
+    <p class="kit-sub">Después de iniciar sesión</p>
+    <div class="kit-stage kit-stage--col">
+      <p style="margin:0">Obtener ticket → Iniciar sesión → <b>Elegí tu paquete</b>. Si la persona entró por su cuenta ("Iniciar sesión" del header), vuelve al Inicio.</p>
+    </div>
+    <p class="kit-label">El sitio recuerda a dónde iba y la lleva ahí · si vuelve al inicio, lo olvida</p>
+
+    <p class="kit-sub">Pie · c-footer</p>
+    <div class="kit-stage" style="padding:0;overflow:hidden">
+      <footer class="c-footer">
+        <div class="l-container c-footer__grid">
+          <div><span class="c-logo"><img src="assets/logo_mark_a.png" alt="RESET" width="120" height="33"></span><p>Festival <i lang="en">gamer</i> · 18, 19 y 20 de septiembre de 2026 · CEC, Buenos Aires</p></div>
+          <ul class="c-footer__links"><li><a href="#navegacion">Información</a></li><li><a href="#navegacion">Cronograma</a></li><li><a href="#navegacion">Preguntas frecuentes</a></li><li><a href="#navegacion" class="is-hover">Soporte</a></li><li><a href="#navegacion">Mi cuenta</a></li></ul>
+          <div class="c-footer__cta"><p class="c-footer__cta-title">¿Listo para jugar?</p><a class="c-button c-button--primary c-button--sm" href="#navegacion">Obtener ticket</a></div>
+        </div>
+      </footer>
+    </div>
+    <p class="kit-label">"Soporte" lleva al contacto al final de las preguntas frecuentes</p>
+  </section>
+
+  <!-- ============================ 11 TARJETAS ============================ -->
+  <section class="kit-sec" id="tarjetas" aria-labelledby="t-tarjetas">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">11</span>
+      <h2 id="t-tarjetas">Tarjetas</h2>
+      <p class="kit-sec__kicker">Esquinas de corchete violeta y verde, como el marco del logotipo. Al pasar el puntero se encienden.</p>
+    </div>
+
+    <p class="kit-sub">Contenido del inicio</p>
+    <div class="kit-grid">
+      <div class="kit-box"><div class="kit-stage"><div class="c-card c-card--fact"><strong>3 días</strong><span>de experiencia inmersiva</span></div></div><p class="kit-label">c-card--fact · dato</p></div>
+      <div class="kit-box"><div class="kit-stage"><div class="c-card c-card--pillar"><span class="c-icon" data-icon="drop" aria-hidden="true"></span>Hidratación</div><div class="c-card c-card--pillar is-hover"><span class="c-icon" data-icon="heart" aria-hidden="true"></span>Descanso</div></div><p class="kit-label">c-card--pillar · reposo y puntero encima</p></div>
+      <div class="kit-box"><div class="kit-stage"><div class="c-card"><div class="c-media c-media--icon" data-icon-hex="dice" aria-hidden="true"></div><h3>Recompensas que no paran</h3><p>Logros y premios al azar que te hacen volver por uno más</p></div></div><p class="kit-label">c-card · información</p></div>
+      <div class="kit-box"><div class="kit-stage"><div class="c-card c-card--activity"><div class="c-media c-media--thumb" data-thumb="controller" data-tone="cyan" aria-hidden="true"></div><span class="c-badge">Principal</span><h3><i lang="en">The Nexus Cooldowns</i></h3><p>Cada 30 minutos la pantalla se bloquea: caminás a un tótem, escaneás tu QR y seguís</p><p class="card__where"><i lang="en">The Nexus</i></p></div></div><p class="kit-label">c-card--activity · carrusel</p></div>
+      <div class="kit-box"><div class="kit-stage"><div class="c-card c-card--person"><div class="c-media c-media--avatar" data-icon-hex="mic" aria-hidden="true"></div><h4>Frankkaster y 9z Team</h4><p>Conferencia sobre disciplina y psicología deportiva</p></div></div><p class="kit-label">c-card--person · <i lang="en">line-up</i></p></div>
+      <div class="kit-box"><div class="kit-stage"><div class="c-brand"><div class="c-media c-media--logo" data-icon-trap="bolt" aria-hidden="true"></div><strong>Red Bull</strong><span><i lang="en">Main Arena</i> y desafío de reflejos</span></div></div><p class="kit-label">c-brand · marca</p></div>
+    </div>
+
+    <p class="kit-sub">Carrusel · c-carousel</p>
+    <div class="kit-stage kit-stage--col" data-kit-carousel>
+      <div class="section-head" style="align-items:center">
+        <p class="kit-note" style="margin:0">Flechas y contador: siempre se sabe cuántas actividades hay y en cuál estás</p>
+        <div class="c-carousel__controls">
+          <button class="c-icon-button" type="button" data-kit-prev aria-label="Ver actividades anteriores"><span data-icon="arrow-left" aria-hidden="true"></span></button>
+          <span class="c-carousel__count" aria-live="polite">1–3 de 12</span>
+          <button class="c-icon-button" type="button" data-kit-next aria-label="Ver más actividades"><span data-icon="arrow-right" aria-hidden="true"></span></button>
+        </div>
+      </div>
+      <div class="c-carousel" style="margin-top:0">
+        <ul class="c-carousel__track" data-kit-track>
+          <li class="c-card c-card--activity"><div class="c-media c-media--thumb" data-thumb="trophy" data-tone="violet" aria-hidden="true"></div><span class="c-badge">Principal</span><h3>Torneos con <i lang="en">Tactical Timeouts</i></h3><p>Entre partidas, dos minutos para que todo el público se pare y se mueva</p><p class="card__where"><i lang="en">Main Arena</i></p></li>
+          <li class="c-card c-card--activity"><div class="c-media c-media--thumb" data-thumb="mic" data-tone="green" aria-hidden="true"></div><span class="c-badge">Principal</span><h3>El <i lang="en">Meta-Cast</i> en vivo</h3><p>Charlas tipo <i lang="en">podcast</i> sobre salud mental, frustración y balance, con humor</p><p class="card__where"><i lang="en">Main Arena</i></p></li>
+          <li class="c-card c-card--activity"><div class="c-media c-media--thumb" data-thumb="foosball" data-tone="cyan" aria-hidden="true"></div><span class="c-badge c-badge--outline">Complementaria</span><h3><i lang="en">Analog Arcade Freeplay</i></h3><p>Uso libre de <i lang="en">air hockey</i>, metegoles, <i lang="en">pool</i> y básquet</p><p class="card__where"><i lang="en">Analog Arcade</i></p></li>
+          <li class="c-card c-card--activity"><div class="c-media c-media--thumb" data-thumb="cube" data-tone="violet" aria-hidden="true"></div><span class="c-badge c-badge--outline">Complementaria</span><h3><i lang="en">Loot Box Hunt</i></h3><p>Búsqueda del tesoro: encontrá los QR escondidos y canjealos por premios</p><p class="card__where">Todo el evento</p></li>
+        </ul>
+      </div>
+    </div>
+    <p class="kit-label">Muestra de 4 de las 12 actividades · deslizá con el dedo o usá las flechas</p>
+
+    <p class="kit-sub">Contacto de soporte</p>
+    <div class="kit-stage kit-stage--col">
+      <div class="c-contact" style="margin:0">
+        <span class="c-icon" data-icon="mail" aria-hidden="true"></span>
+        <div class="c-contact__body"><h3>¿No encontraste tu respuesta?</h3><p>Escribinos y te respondemos en menos de 24 horas hábiles</p></div>
+        <a class="c-button c-button--secondary" href="#tarjetas">Escribir a soporte@reset.gg</a>
+      </div>
+    </div>
+    <p class="kit-label">Al final de las preguntas frecuentes</p>
+
+    <p class="kit-sub">Opción de paquete · c-option</p>
+    <div class="kit-grid">
+      <div class="kit-box"><div class="kit-stage" style="padding:16px">
+        <button type="button" class="c-option" aria-pressed="false"><span class="c-media c-media--icon" data-icon-hex="controller" aria-hidden="true"></span><span class="c-option__title">Pase General</span><span class="c-option__price" data-kit-money="35000">$35 000</span><span class="c-option__meta">por persona, por día</span><ul class="c-option__list"><li><i lang="en">The Nexus</i> y <i lang="en">Safe Zone</i></li><li>Puntos en la <i lang="en">app</i></li></ul><span class="c-option__cta">Elegir Pase General</span></button>
+      </div><p class="kit-label">reposo</p></div>
+      <div class="kit-box"><div class="kit-stage" style="padding:16px">
+        <button type="button" class="c-option is-hover" aria-pressed="false"><span class="c-media c-media--icon" data-icon-hex="swords" aria-hidden="true"></span><span class="c-option__title">Pase Competidor</span><span class="c-option__price" data-kit-money="48000">$48 000</span><span class="c-option__meta">por persona, por día</span><ul class="c-option__list"><li>Todo el Pase General</li><li><i lang="en">Speedrun Challenge</i></li></ul><span class="c-option__cta">Elegir Pase Competidor</span></button>
+      </div><p class="kit-label">puntero encima · halo cian</p></div>
+      <div class="kit-box"><div class="kit-stage" style="padding:16px">
+        <button type="button" class="c-option is-selected" aria-pressed="true"><span class="c-media c-media--icon" data-icon-hex="trophy" aria-hidden="true"></span><span class="c-option__title">Pase Pro</span><span class="c-option__price" data-kit-money="72000">$72 000</span><span class="c-option__meta">por persona, por día</span><ul class="c-option__list"><li>Todo el Pase Competidor</li><li>Sesión en el <i lang="en">Upgrade Hub</i></li></ul><span class="c-option__cta">Elegir Pase Pro</span></button>
+      </div><p class="kit-label">elegido · borde verde y etiqueta "Elegido"</p></div>
+    </div>
+
+    <p class="kit-sub">Opción de fecha · c-option</p>
+    <div class="kit-grid">
+      <div class="kit-box"><div class="kit-stage" style="padding:16px">
+        <button type="button" class="c-option" aria-pressed="false"><span class="c-badge c-badge--outline">Disponible</span><span class="c-option__title">Viernes 18</span><span class="c-option__meta">de septiembre de 2026 · 12:00 a 20:00 h</span><span class="c-option__cta">Elegir esta fecha</span></button>
+      </div><p class="kit-label">disponible</p></div>
+      <div class="kit-box"><div class="kit-stage" style="padding:16px">
+        <button type="button" class="c-option" aria-pressed="false"><span class="c-badge c-badge--outline">Quedan 4 lugares</span><span class="c-option__title">Domingo 20</span><span class="c-option__meta">de septiembre de 2026 · 12:00 a 20:00 h</span><span class="c-option__cta">Elegir esta fecha</span></button>
+      </div><p class="kit-label">pocos lugares · se avisa antes de elegir</p></div>
+      <div class="kit-box"><div class="kit-stage" style="padding:16px">
+        <button type="button" class="c-option is-unavailable" aria-pressed="false" aria-disabled="true"><span class="c-badge">Agotada</span><span class="c-option__title">Sábado 19</span><span class="c-option__meta">de septiembre de 2026 · 12:00 a 21:00 h</span><span class="c-option__cta">Sin lugares</span></button>
+      </div><p class="kit-label">agotada · tachada y con trama; si se toca, explica por qué</p></div>
+    </div>
+
+    <p class="kit-sub">Compra, entrada y cuenta</p>
+    <div class="kit-space" style="gap:16px">
+      <div class="kit-box"><div class="kit-stage">
+        <aside class="c-summary" aria-label="Resumen del pedido (ejemplo)" style="width:100%">
+          <h2>Resumen del pedido</h2>
+          <dl class="c-summary__list"><dt>Paquete</dt><dd>Pase Pro<a href="#tarjetas">Cambiar</a></dd><dt>Fecha</dt><dd>Domingo 20 de septiembre<a href="#tarjetas">Cambiar</a></dd><dt>Personas</dt><dd>2<a href="#tarjetas">Cambiar</a></dd><dt>Precio por persona</dt><dd data-kit-money="72000">$72 000</dd></dl>
+          <p class="c-summary__total">Total <strong data-kit-money="144000">$144 000</strong></p>
+          <button class="c-button c-button--primary c-button--block" type="button">Confirmar y pagar</button>
+          <p class="c-summary__note">Antes de pagar podés cambiar tu pedido</p>
+        </aside>
+      </div><p class="kit-label">c-summary · siempre a la vista al pagar</p></div>
+      <div class="kit-box"><div class="kit-stage">
+        <article class="c-ticket" style="width:100%;margin:0">
+          <div class="c-ticket__qr"><canvas class="c-qr" width="232" height="232" data-kit-qr="RST-7K2Q" role="img" aria-label="Código QR de ejemplo"></canvas><p class="c-qr__label">RST-7K2Q</p></div>
+          <dl class="c-ticket__data"><dt>Paquete</dt><dd>Pase Pro</dd><dt>Fecha</dt><dd>Domingo 20 de septiembre</dd><dt>Personas</dt><dd>2</dd><dt>Titular</dt><dd>Santino Mosca</dd></dl>
+        </article>
+      </div><p class="kit-label">c-ticket · el QR lo dibuja ui.js, igual que en el sitio</p></div>
+    </div>
+    <div class="kit-grid kit-grid--wide" style="margin-top:16px">
+      <div class="kit-box"><div class="kit-stage">
+        <ul class="ticket-list" style="width:100%"><li class="c-ticket-row"><canvas class="c-ticket-row__qr" width="58" height="58" data-kit-qr="RST-7K2Q" aria-hidden="true"></canvas><div><h3>Pase Pro · Domingo 20 de septiembre</h3><p>2 personas · Código RST-7K2Q</p></div><a class="c-button c-button--secondary c-button--sm" href="#tarjetas">Ver QR</a></li></ul>
+      </div><p class="kit-label">c-ticket-row · Mis entradas</p></div>
+      <div class="kit-box"><div class="kit-stage">
+        <div class="c-empty" style="width:100%"><div class="c-media c-media--icon" data-icon-hex="ticket" aria-hidden="true"></div><h3>Todavía no tenés entradas</h3><p>Cuando compres, tu QR aparece acá</p><a class="c-button c-button--primary" href="#tarjetas">Obtener ticket</a></div>
+      </div><p class="kit-label">c-empty · estado vacío con la salida</p></div>
+    </div>
+  </section>
+
+  <!-- ========================= 12 DATOS Y CONTENIDO ========================= -->
+  <section class="kit-sec" id="datos" aria-labelledby="t-datos">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">12</span>
+      <h2 id="t-datos">Datos y contenido</h2>
+      <p class="kit-sec__kicker">Piezas que cuentan: la encuesta, el cronograma y las preguntas frecuentes.</p>
+    </div>
+
+    <p class="kit-sub">Etiquetas · c-badge</p>
+    <div class="kit-stage">
+      <span class="c-badge">Principal</span>
+      <span class="c-badge c-badge--outline">Complementaria</span>
+      <span class="c-badge c-badge--outline">Quedan 4 lugares</span>
+      <span class="c-badge">Agotada</span>
+    </div>
+
+    <p class="kit-sub">Encuesta · dato, gráfico y batería</p>
+    <div class="kit-grid kit-grid--wide">
+      <div class="kit-box"><div class="kit-stage kit-stage--col">
+        <p class="stat" style="margin:0">40 %</p>
+        <p class="stat__text" style="margin:0">dejó de lado el estudio, el trabajo o a sus amigos por quedarse jugando</p>
+        <div class="c-media c-media--chart" data-chart="days"></div>
+      </div><p class="kit-label">stat + c-chart · los datos vienen de art.js, los mismos de la portada</p></div>
+      <div class="kit-box"><div class="kit-stage" style="justify-content:space-around">
+        <div class="kit-state"><div class="c-battery" data-level="high"><div class="c-battery__fill" style="width:100%"></div></div><span class="kit-state__name">100 %</span></div>
+        <div class="kit-state"><div class="c-battery" data-level="mid"><div class="c-battery__fill" style="width:50%"></div></div><span class="kit-state__name">50 %</span></div>
+        <div class="kit-state"><div class="c-battery" data-level="low"><div class="c-battery__fill" style="width:8%"></div></div><span class="kit-state__name"><i lang="en">cooldown</i></span></div>
+      </div><p class="kit-label">c-battery · verde, cian y rojo según el nivel</p></div>
+    </div>
+
+    <p class="kit-sub">Cronograma y preguntas frecuentes</p>
+    <div class="kit-grid kit-grid--wide">
+      <div class="kit-box"><div class="kit-stage kit-stage--col">
+        <ul class="schedule">
+          <li><time>12:00 h</time><span>Apertura de puertas</span><em><i lang="en">Spawn Point</i></em></li>
+          <li><time>13:00 h</time><span>Copa Cooperativa Local</span><em><i lang="en">The Nexus</i></em></li>
+          <li><time>16:00 h</time><span>El <i lang="en">Meta-Cast</i> en vivo</span><em><i lang="en">Main Arena</i></em></li>
+        </ul>
+      </div><p class="kit-label">schedule · hora en Mono verde, lugar en cian</p></div>
+      <div class="kit-box"><div class="kit-stage kit-stage--col">
+        <div class="c-accordion" style="margin:0">
+          <details class="c-accordion__item" open><summary>¿Dónde veo mi entrada?</summary><p>En Mi cuenta, dentro de Mis entradas. Tocá tu avatar, arriba a la derecha, y abrí el QR de la entrada que quieras.</p></details>
+          <details class="c-accordion__item"><summary>¿Cuántas entradas puedo comprar?</summary><p>Hasta 6 por compra, todas para el mismo paquete y la misma fecha</p></details>
+        </div>
+      </div><p class="kit-label">c-accordion · abierto con borde violeta</p></div>
+    </div>
+
+    <p class="kit-sub">Lista de logros</p>
+    <div class="kit-stage kit-stage--col">
+      <ul class="check-list" style="margin:0">
+        <li>Cada 30 minutos de juego, un descanso activo obligatorio</li>
+        <li>Juego cooperativo presencial, sin conexión a internet</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =========================== 13 OBJETOS 3D =========================== -->
+  <section class="kit-sec" id="objetos" aria-labelledby="t-3d">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">13</span>
+      <h2 id="t-3d">Objetos 3D</h2>
+      <p class="kit-sec__kicker">Motor propio sobre canvas, sin librerías ni internet. Cada objeto acompaña una idea del recorrido.</p>
+    </div>
+    <div class="kit-grid">
+      <div class="kit-box"><div class="kit-stage" style="justify-content:center;min-height:240px"><div class="c-obj3d" data-scene="joystick" role="img" aria-label="Joystick en 3D"></div></div><p class="kit-label">Joystick · portada · se inclina hacia el puntero y se arrastra</p></div>
+      <div class="kit-box"><div class="kit-stage" style="justify-content:center;min-height:240px"><div class="c-obj3d c-obj3d--story" data-scene="controller" role="img" aria-label="Control en 3D"></div></div><p class="kit-label">Control · encuesta · sus luces muestran la batería</p></div>
+      <div class="kit-box"><div class="kit-stage" style="justify-content:center;min-height:240px"><div class="c-obj3d c-obj3d--small" data-scene="hourglass" role="img" aria-label="Reloj de arena en 3D"></div></div><p class="kit-label">Reloj de arena · problemática · un clic lo da vuelta</p></div>
+      <div class="kit-box"><div class="kit-stage" style="justify-content:center;min-height:240px"><div class="c-obj3d c-obj3d--small" data-scene="console" role="img" aria-label="Consola retro en 3D"></div></div><p class="kit-label">Consola · llamado final</p></div>
+    </div>
+  </section>
+
+  <!-- =========================== 14 MOVIMIENTO =========================== -->
+  <section class="kit-sec" id="movimiento" aria-labelledby="t-mov">
+    <div class="kit-sec__head">
+      <span class="kit-sec__n">14</span>
+      <h2 id="t-mov">Movimiento</h2>
+      <p class="kit-sec__kicker">Todo se apaga si el sistema pide movimiento reducido. Lo que se ve primero nunca se anima al aparecer.</p>
+    </div>
+    <div class="kit-table-wrap">
+      <table class="kit-table">
+        <thead><tr><th>Animación</th><th>Duración</th><th>Para qué</th></tr></thead>
+        <tbody>
+          <tr><td><code>.reveal</code></td><td>0,5 s</td><td>Los bloques del inicio suben y aparecen al entrar en pantalla</td></tr>
+          <tr><td><code>toast-in</code></td><td>0,2 s</td><td>El aviso baja apenas al aparecer</td></tr>
+          <tr><td>Paso elegido</td><td>0,28 s</td><td>Pausa para ver "Elegido" antes de avanzar al paso siguiente</td></tr>
+          <tr><td>Barras de la encuesta</td><td>0,9 s</td><td>Crecen cuando el dato llega al centro de la pantalla</td></tr>
+          <tr><td>Batería</td><td>0,45 s</td><td>Se descarga y cambia de color con el scroll narrativo</td></tr>
+          <tr><td><code>art-spin</code> · <code>art-pulse</code> · <code>art-core</code></td><td>40 s · 3,2 s · 2,6 s</td><td>El portal de la portada gira y late</td></tr>
+          <tr><td>Paralaje 3D</td><td>con el scroll</td><td>Los objetos giran como máximo ±28°: más, quedan de canto y no se leen</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="kit-foot">
+    <img src="assets/logo_mark_a.png" alt="" width="96" height="26">
+    <span>RESET · UI Kit del sitio final · Santino Mosca Jacob · Rodrigo Masek · Facundo De Vichenzo · 2026</span>
+  </footer>
+</main>
+
+<script src="art.js"></script>
+<script src="ui.js"></script>
+<script src="scene3d.js"></script>
+<script src="ui-kit.js"></script>
+</body>
+</html>
